@@ -5,8 +5,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
-
     public BoardManager boardScript;
+    public int playerFoodPoints = 100;
+    [HideInInspector] public bool playersTurn = true;
 
     private int level = 32;
 
