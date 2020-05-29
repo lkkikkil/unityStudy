@@ -52,6 +52,8 @@ public class Player : MovingObject
 
         RaycastHit2D hit;
 
+        CheckIfGameOver();
+
         GameManager.instance.playersTurn = false;
     }
 
@@ -60,5 +62,13 @@ public class Player : MovingObject
         Wall hitWall = component as Wall;
         hitWall.DamageWall(wallDamage);
         animator.SetTrigger("playerChop");
+    }
+
+    private void CheckIfGameOver()
+    {
+        if (food <= 0)
+        {
+            GameManager.instance.GameOver();
+        }
     }
 }
