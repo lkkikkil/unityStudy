@@ -64,6 +64,13 @@ public class Player : MovingObject
         animator.SetTrigger("playerChop");
     }
 
+    public void LoseFood (int loss)
+    {
+        animator.SetTrigger("playerHit");
+        food -= loss;
+        CheckIfGameOver()
+;    }
+
     private void CheckIfGameOver()
     {
         if (food <= 0)
