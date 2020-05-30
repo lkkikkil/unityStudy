@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy : MovingObject
 {
+    public int playerDamage;
+
+    private Animator animator;
     private Transform target;
     private bool skipMove;
 
@@ -12,12 +15,6 @@ public class Enemy : MovingObject
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         base.Start();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     protected override void AttemptMove<T>(int xDir, int yDir)
@@ -44,5 +41,12 @@ public class Enemy : MovingObject
             xDir = target.position.x > transform.position.x ? 1 : -1;
 
         AttemptMove<Player>(xDir, yDir);
+    }
+
+    protected override void OnCantMove<T>(T component)
+    {
+        Player hitPlayer = component as Player;
+
+        hitPlayer.LoseFood(playerDamage);
     }
 }
