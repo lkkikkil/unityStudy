@@ -7,7 +7,7 @@ public class Loader : MonoBehaviour
     public GameObject gameManager;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (GameManager.instance == null)
             Instantiate(gameManager);
