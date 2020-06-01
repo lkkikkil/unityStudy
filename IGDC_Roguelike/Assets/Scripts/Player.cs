@@ -16,6 +16,7 @@ public class Player : MovingObject
     public AudioClip eatSound2;
     public AudioClip drinkSound1;
     public AudioClip drinkSound2;
+    public AudioClip gameOverSound;
 
     private Animator animator;
     private int food;
@@ -120,6 +121,7 @@ public class Player : MovingObject
     {
         if (food <= 0)
         {
+            SoundManager.instance.PlaySingle(gameOverSound);
             SoundManager.instance.musicSource.Stop();
             GameManager.instance.GameOver();
         }
