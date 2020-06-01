@@ -10,6 +10,8 @@ public class Player : MovingObject
     public int pointsPerSoda = 20;
     public float restartLevelDelay = 1f;
     public Text foodText;
+    public AudioClip moveSound1;
+    public AudioClip moveSound2;
 
     private Animator animator;
     private int food;
@@ -57,6 +59,10 @@ public class Player : MovingObject
         base.AttemptMove<T>(xDir, yDir);
 
         RaycastHit2D hit;
+        if(Move (xDir, yDir, out hit))
+        {
+            SoundManager.instance.RandomizeSfx(moveSound1, moveSound2);
+        }
 
         CheckIfGameOver();
 
