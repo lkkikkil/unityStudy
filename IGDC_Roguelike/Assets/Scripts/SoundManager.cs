@@ -6,6 +6,7 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager instance = null;
     public AudioSource efxSource;
+    public AudioSource musicSource;
 
     public float lowPitchRange = 0.95f;
     public float highPitchRange = 1.05f;

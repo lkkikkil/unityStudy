@@ -108,6 +108,7 @@ public class Player : MovingObject
     {
         if (food <= 0)
         {
+            SoundManager.instance.musicSource.Stop();
             GameManager.instance.GameOver();
         }
     }
