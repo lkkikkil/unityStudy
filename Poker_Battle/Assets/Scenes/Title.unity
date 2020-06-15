@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 76724746}
   - component: {fileID: 76724745}
   m_Layer: 5
-  m_Name: Title
+  m_Name: Title_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1879,7 +1879,7 @@ GameObject:
   - component: {fileID: 1691562606}
   - component: {fileID: 1691562605}
   m_Layer: 5
-  m_Name: Poker_Bg
+  m_Name: Title_Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
