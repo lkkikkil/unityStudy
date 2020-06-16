@@ -8,4 +8,13 @@ public class CardManager : MonoBehaviour
 
     private List<int> cardNumbers = new List<int>();
 
+    void InitializeCardNumbersList()
+    {
+        cardNumbers.Clear();
+
+        for(int cardCount = 0; cardCount < 40; cardCount++)
+        {
+            cardNumbers.Add(cardCount);
+        }
+    }
 }
