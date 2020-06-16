@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class CardManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject[] cardList;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private List<int> cardNumbers = new List<int>();
+
 }
